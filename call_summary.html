@@ -39,48 +39,104 @@
     <div class="container-fluid px-4 dashboard-pane">
         <div class="row gx-4 dashboard-pane">
             <div class="col-9">
-                <h5>Call Summary</h5>
-                <table class="table table-hover">
+                <h3>Call details for Run Number 001</h3>
+                <div class="row dashboard-pane">
+                  <div class="col">
+                    <div class="card">
+                      <div class="card-header">
+                        Demographics
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                          <b>Caller name:&nbsp;</b>
+                          Lisa Kruppenbacher
+                        </li>
+                        <li class="list-group-item">
+                          <b>Bib number:&nbsp;</b>
+                          56
+                        </li>
+                        <li class="list-group-item">
+                          <b>Callback number:&nbsp;</b>
+                          585-555-6969
+                        </li>
+                      </ul>                
+                    </div>
+                  </div>
+
+                  <div class="col">
+                    <div class="card">
+                      <div class="card-header">
+                        Call information
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                          <b>Complaint:&nbsp;</b>
+                          Flat tire
+                        </li>
+                        <li class="list-group-item">
+                          <b>Location:&nbsp;</b>
+                          Corner of Rush Mendon and Pinnacle
+                        </li>
+                        <li class="list-group-item">
+                          <b>Status:&nbsp;</b>
+                          <span class="text-success">Closed</span>
+                        </li>
+                      </ul>                
+                    </div>
+                  </div>
+                  
+                </div>
+
+                <div class="dashboard-pane">
+                  <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Notes</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  </div>
+                </div>
+
+                <div class="dashboard-pane">
+                  <h5>Event history</h5>
+                  <table class="table">
                     <thead>
-                        <th scope="col">Run #</th>
-                        <th scope="col">Time Received</th>
-                        <th scope="col">Description/Complaint</th>
-                        <th scope="col">Rider/Bib</th>
-                        <th scope="col">Status</th>
-                        <th scope="col">Assignment</th>
-                        <th scope="col">Options</th>
+                      <th scope="col">Timestamp</th>
+                      <th scope="col">Event description</th>
                     </thead>
                     <tbody>
-                        <tr class="table-danger">
-                            <td>001</td>
-                            <td>5/15/2024 22:17:36</td>
-                            <td>Flat tire</td>
-                            <td>Lisa Kruppenbacher (#56)</td>
-                            <td class="text-danger">Awaiting assignment</td>
-                            <td>Unassigned</td>
-                            <td>
-                                <a href="call_summary.html" class="btn btn-sm btn-light">View</a>
-                                <a href="#" class="btn btn-sm btn-danger">Close</a>
-                            </td>
-                        </tr>
-
+                      <tr>
+                        <td>5/15/2024 22:36:04</td>
+                        <td>Call marked closed by dispatch</td>
+                      </tr>
+                      <tr>
+                        <td>5/15/2024 22:35:52</td>
+                        <td>SAG5 back in service</td>
+                      </tr>
+                      <tr>
+                        <td>5/15/2024 22:21:07</td>
+                        <td>SAG5 on-scene</td>
+                      </tr>
+                      <tr>
+                        <td>5/15/2024 22:17:52</td>
+                        <td>SAG5 en-route</td>
+                      </tr>
+                      <tr>
+                        <td>5/15/2024 22:17:49</td>
+                        <td>Assigned call to unit SAG5</td>
+                      </tr>
+                      <tr>
+                        <td>5/15/2024 22:17:36</td>
+                        <td>Call created</td>
+                      </tr>
                     </tbody>
-                </table>
+                    
+                  </table>
+                </div>
             </div>
-            <div class="col-3">   
-                <div class="card">
-                    <div class="card-header">
-                      Filter Calls by Type
-                    </div>
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item"><span class="badge rounded-pill text-bg-primary badge-left">0</span>All calls</li>
-                      <li class="list-group-item"><span class="badge rounded-pill text-bg-danger badge-left">0</span>Unassigned</li>
-                      <li class="list-group-item"><span class="badge rounded-pill text-bg-warning badge-left">0</span>In progress</li>
-                      <li class="list-group-item"><span class="badge rounded-pill text-bg-success badge-left">0</span>Closed</li>
-                    </ul>
-                  </div>
+            <div class="col-3"> 
+                <a class="btn btn-secondary">Assign call</a>
+                <a class="btn btn-success">Update</a>
+                <a class="btn btn-danger">Close</a>
             </div>
             
+          </div>
         </div>
-    </div>
-</html>
+  </html>
